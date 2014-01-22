@@ -1,0 +1,64 @@
+==connect to test environment==
+
+1) oam
+ssh root@testEnvironmentIPAddress
+
+2) CLI
+
+telnet environmentTestIP XXXX
+         xxx.xxx.xxx.xxx:4 digits number
+
+3) GUI
+
+XXX.XXX.XXX.XXX 
+just type the IP address into the webaddress field in a WebBrowser. It is like a homeuse router parameters. 
+
+
+== know where I am in the system==
+
+
+
+pwd
+
+
+
+
+==to compile the files and build it==
+
+
+~/gerrit/udc/framework/tools/build hlr -tb    ****this automates everything
+
+make -j 10  **** this builds manually, it only works in the "bin" directory
+
+
+
+==to find if there is a file with a particular piece of word in the current directory==
+
+ls -ltr | grep -i TheLittleWordIWantToFind
+
+
+
+
+==how to execute test in test environment.==
+
+
+./exec.sh HLR HLR-int1.cfg TC_INT_TRAF0001_Location_Updating.TC_INT_TRAF0001
+			      moduleName 		    .   testCaseName           
+
+		
+
+==script to build and transfer all required files to a test execution directory in a TTCN server==
+
+this script is called : build  ***its location is on ~/gerrit/udc/framework/tools*****
+
+this is a shell script language... 
+
+for instance today 21/01/2014 I installed all the HLR package into Int-1 test environment
+
+peter also used: 
+ls -l
+framework/tools/build
+head framework/tools/build
+ head -n 20 framework/tools/build
+framework/tools/build hlr -tb
+
